@@ -7,15 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-    include("conn.php"); // Assuming "conn.php" contains your database connection settings.
-    
-    $result = mysqli_query($conn, "SELECT * FROM login");
-    $row = mysqli_fetch_assoc($result);
-    echo $row["username"];   
-
-    mysqli_close($conn); // Close the database connection when done.
-?>
-
+        
 </body>
 </html>

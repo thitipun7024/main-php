@@ -19,13 +19,12 @@
             $_SESSION["role"] = $row["role"];
 
             if($_SESSION["role"] == 1);
-                echo "";
                 header("Location: index.php"); 
         }else{
-            echo "<script>";
+             echo "<script>";
             echo "alert(\" user หรือ pass ไม่ถูกต้อง\");";
             echo "window.history.back()";
-            echo "</script>" ; 
+            echo "</script>" ;
         }
 
     }else{

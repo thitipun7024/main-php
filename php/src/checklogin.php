@@ -13,12 +13,13 @@
             
             $row = mysqli_fetch_array($query);
 
-            $_SESSION["id"] = $row["id"];
-            $_SESSION["username"] = $row["username"];
-            $_SESSION["password"] = $row["password"];
-            $_SESSION["role"] = $row["role"];
+            //$_SESSION["id"] = $row["id"];
+            $_SESSION['id'] = "1";
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['password'] = $row['password'];
+            $_SESSION['role'] = $row['role'];
 
-            if($_SESSION["role"] == 1);
+            if( $_SESSION['role'] == 1);
                 header("Location: index.php"); 
         }else{
              echo "<script>";

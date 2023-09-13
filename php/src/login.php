@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/stlye.css">
+    <title>Document</title>
 </head>
 <body>
-  <div class="container mt-5  ">
-    <h3>Fading Modal Example</h3>
-    <p>Click on the button to open the modal.</p>
-    
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-      Open modal
-    </button>
-  </div>
-  
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <form action="checklogin.php" method="post">
+              <div class="card bg-dark text-white" style="border-radius: 1rem; top: 150px;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+      
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-white-50 mb-5">Please enter your login and password!</p>
+      
+                    <div class="form-outline form-white mb-4">
+                      <input type="text" name="username" id="username" class="form-control form-control-lg" placeholder="Username" />
+                    </div>
+      
+                    <div class="form-outline form-white mb-4">
+                      <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" />
+                    </div>
+      
+                    <button class="btn btn-outline-light btn-lg px-4" type="submit">Login</button>
+      
+                  </div>
+      
+                  <div>
+                    <p class="mb-1">Don't have an account? <a href="register.php" class="text-white-50 fw-bold">Sign Up</a>
+                    </p>
+                  </div>
+      
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
 
 
+    <!-- <div class="d-flex align-items-center min-vh-100">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <form action="">
+                    <div class="col-md-8 col-lg-5">
+                        <div class="card justify-content-center shadow ">
+                            <div class="card-body px-3">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
 </body>
 </html>

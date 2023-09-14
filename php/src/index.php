@@ -41,7 +41,7 @@
             $sql = "SELECT * FROM login";
             $result1 = mysqli_query($conn, $sql);
             ?>
-            <a class="nav-link align-items-end" href="profile.php"><?php echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
+            <a class="nav-link align-items-end" href="edit_user.php"><?php echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
               <?php
           }else{
               ?>

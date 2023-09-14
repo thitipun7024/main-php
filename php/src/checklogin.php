@@ -13,8 +13,7 @@
             
             $row = mysqli_fetch_array($query);
 
-            //$_SESSION["id"] = $row["id"];
-            $_SESSION['id'] = "1";
+            $_SESSION["id"] = $row['id_login'];
             $_SESSION['username'] = $row['username'];
             $_SESSION['password'] = $row['password'];
             $_SESSION['role'] = $row['role'];

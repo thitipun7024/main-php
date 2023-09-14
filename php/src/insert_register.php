@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $tmp = $_FILES['img']['tmp_name'];
 $img = $_FILES['img']['name'];
 
-$extArray = explode('.', $img);
+$extArray = explode('.',$img);
 $ext = strtolower(end($extArray));
 
 $nameimg = $user.".".$ext;
@@ -30,9 +30,9 @@ if($num > 0){
     echo "</script>";
 }else{
     $sql3 = "INSERT INTO register VALUES (null,'$user','$pass','$role','$firstname','$lastname','$email','$nameimg', NOW())";
-    $result3 = mysqli_query($conn, $sql3);  
-    //$sql4 = "INSERT INTO login VALUES (null,'$user','$pass','$role')"; 
-    //$result4 = mysqli_query($conn, $sql4); 
+    $result3 = mysqli_query($conn, $sql3);
+    $sql4 = "INSERT INTO login VALUES (null,'$user','$pass','$role')"; 
+    $result4 = mysqli_query($conn, $sql4);
     echo "<script>";
     echo "alert(\"register success\");";
     echo "window.location.href='login.php'";

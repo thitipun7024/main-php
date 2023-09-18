@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="icon" type="image/icon" href="./image2/admin2.png">
+    <title>DEMO</title>
 </head>
 <body>
 
@@ -41,7 +42,7 @@
             $sql = "SELECT * FROM login";
             $result1 = mysqli_query($conn, $sql);
             ?>
-            <a class="nav-link align-items-end" href="edit_user.php"><?php echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
+            <a class="nav-link align-items-end" href="profile.php"><?php echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
               <?php
           }else{
               ?>
@@ -87,20 +88,20 @@
         </li>
         
         <?php
-        if(isset($_SESSION['id'])){
-            $id = $_SESSION['id'];
-            $username = $_SESSION['username'];
-            $password = $_SESSION['password'];
-            $sql = "SELECT * FROM login";
-            $result1 = mysqli_query($conn, $sql);
-            ?>
-            <a class="nav-link"><?php echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
-              <?php
-          }else{
-              ?>
-              <a href="login.php" class="btn btn-outline-primary">LOGIN</a>
-              <?php
-          };
+        // if(isset($_SESSION['id'])){
+        //     $id = $_SESSION['id'];
+        //     $username = $_SESSION['username'];
+        //     $password = $_SESSION['password'];
+        //     $sql = "SELECT * FROM login";
+        //     $result1 = mysqli_query($conn, $sql);
+        //     ?>
+        //     <a class="nav-link"><?php //echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
+        //       <?php
+        //   }else{
+        //       ?>
+        //       <a href="login.php" class="btn btn-outline-primary">LOGIN</a>
+        //       <?php
+        //   };
           ?>
       </ul>
     </div>

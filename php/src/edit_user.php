@@ -10,7 +10,8 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/stlye.css">
-    <title>Document</title>
+    <link rel="icon" type="image/icon" href="./image2/admin2.png">
+    <title>DEMO</title>
 </head>
 <body>
     <?php
@@ -23,7 +24,7 @@ session_start();
         <div class="container">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <form action="insert_register.php" method="post" enctype="multipart/form-data">
+              <form action="update_profile.php" method="post" enctype="multipart/form-data">
               <div class="card bg-dark text-white" style="border-radius: 1rem; top: 100px; bottom: 100px">
                 <div class="card-body p-5 text-center">
       
@@ -37,19 +38,19 @@ session_start();
                     </div>
       
                     <div class="form-outline form-white mb-4">
-                      <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" value="<?php echo $row['password']; ?>" disabled />
+                      <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" value="<?php echo $row['password']; ?>"  />
                     </div>
 
                     <div class="form-outline form-white mb-4">
-                        <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="Firstname" value="<?php echo $row['firstname']; ?>" disabled/>
+                        <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="Firstname" value="<?php echo $row['firstname']; ?>" />
                       </div>
 
                     <div class="form-outline form-white mb-4">
-                        <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Lastname" value="<?php echo $row['lastname']; ?>" disabled />
+                        <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Lastname" value="<?php echo $row['lastname']; ?>"  />
                     </div>
 
                     <div class="form-outline form-white mb-4">
-                        <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Email" value="<?php echo $row['email']; ?>" disabled />
+                        <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Email" value="<?php echo $row['email']; ?>"  />
                     </div>
 
                     <div class="form-outline form-white mb-3">
@@ -66,10 +67,15 @@ session_start();
                         }
                         ?>
                     </div>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="file" name="img" id="img" class="form-control form-control-lg" placeholder="FILE"  />
+                    </div>
+                    
                         <input type="hidden" name="id" id="id" class="form-control form-control-lg" value="<?php echo $row['id'] ?>"/>
 
-                    <button class="btn btn-outline-primary btn-lg px-4" type="submit">Register</button>
-                    <button class="btn btn-outline-warning btn-lg px-4" type="submit">CANCEL</button>
+                        <button class="btn btn-outline-primary btn-lg px-4">EDIT</button>
+                    <a href="index.php" class="btn btn-outline-warning btn-lg px-4">CANCEL</a>
       
                   </div>
                 </div>

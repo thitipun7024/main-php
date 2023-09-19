@@ -39,7 +39,7 @@
             $sql = "SELECT * FROM login";
             $result1 = mysqli_query($conn, $sql);
             ?>
-            <a class="nav-link align-items-end" href="profile.php"  style="color: #ffffff;"><?php echo $username; ?></a> <p></p> <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#myModal">LOGOUT</button>
+            <a class="nav-link text-start" href="profile.php"  style="color: #ffffff;"><?php echo $username; ?></a> <p></p> <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#myModal">LOGOUT</button>
             <!-- The Modal -->
             <div class="modal fade" id="myModal">
               <div class="modal-dialog modal-dialog-centered">

@@ -1,5 +1,8 @@
-Swal.fire(
-    'The Internet?',
-    'That thing is still around?',
-    'question'
-  )
+setTimeout(function(){
+    swal({ 
+        icon: 'error', 
+        title: 'LOGIN FAIL'
+    }, function(){
+        window.location ='index.php'
+    })
+}, 1000);

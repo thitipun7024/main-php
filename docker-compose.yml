@@ -8,9 +8,11 @@ services:
     depends_on:
       - db
     volumes:
-      - ./php/src:/var/www/html/
+      - ./php:/var/www/html/
     ports:
       - 8080:80
+    environment:
+      - TZ=Asia/Bangkok
 
   db:
     container_name: db
@@ -21,8 +23,11 @@ services:
       MYSQL_DATABASE: mphp
       MYSQL_USER: MYSQL_USER
       MYSQL_PASSWORD:  MYSQL_PASSWORD
+      TZ: Asia/Bangkok
     ports:
       - 9901:3306
+    volumes:
+      - ./db-mysql:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin
@@ -31,6 +36,7 @@ services:
       - 8081:80
     environment:
       - PMA_HOST=db
+      - TZ=Asia/Bangkok
     depends_on:
       - db
   

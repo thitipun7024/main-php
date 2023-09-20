@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-primary py-3">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary py-3">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" style="color: #ffffff; font-weight: 500;">LOGO</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,52 +32,54 @@
         </ul>
         <form class="d-flex align-items-center">
           <?php
-        if(isset($_SESSION['id'])){
-            $id = $_SESSION['id'];
-            $username = $_SESSION['username'];
-            $password = $_SESSION['password'];
-            $sql = "SELECT * FROM login";
-            $result1 = mysqli_query($conn, $sql);
+        // if(isset($_SESSION['id'])){
+        //     $id = $_SESSION['id'];
+        //     $username = $_SESSION['username'];
+        //     $password = $_SESSION['password'];
+        //     $sql = "SELECT * FROM login";
+        //     $result1 = mysqli_query($conn, $sql);
             ?>
-            <a class="nav-link text-start" href="profile.php"  style="color: #ffffff;"><?php echo $username; ?></a> <p></p> <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#myModal">LOGOUT</button>
+            <!-- <a class="nav-link text-start" href="profile.php"  style="color: #ffffff;"><?php //echo $username; ?></a> <p></p> <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#myModal">LOGOUT</button> -->
             <!-- The Modal -->
-            <div class="modal fade" id="myModal">
+            <!-- <div class="modal fade" id="myModal">
               <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content"> -->
 
                   <!-- Modal Header -->
-                  <div class="modal-header">
+                  <!-- <div class="modal-header">
                     <h4 class="modal-title">LOGOUT</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                  </div>
+                  </div> -->
 
                   <!-- Modal body -->
-                  <div class="modal-body">
+                  <!-- <div class="modal-body">
                     คุณจะออกจากระบบใช่หรือไม่...
-                  </div>
+                  </div> -->
 
                   <!-- Modal footer -->
-                  <div class="modal-footer">
+                <!--   <div class="modal-footer">
                     <a href="logout.php" class="btn btn-outline-danger">ยืนยัน</a>
                   </div>
 
                 </div>
               </div>
-            </div>
-              <?php
-                }else{
-              ?>
-              <a href="login.php" class="btn btn-outline-dark"  style="color: #ffffff;">LOGIN</a>
+            </div> -->
+              <!-- <?php
+                //}else{
+              ?> -->
+              <!-- <a href="login.php" class="btn btn-outline-dark"  style="color: #ffffff;">LOGIN</a> -->
               
-              <?php
-          };
-          ?>
-        </form>
+              <!-- <?php
+          //};
+          ?> -->
+<!--         </form>
       </div>
   </div>
-</nav>
+</nav>  -->
 
-
+<?php
+  include("header.php");
+?>
 <?php
   include("body_index.php");
 ?>
@@ -89,52 +91,5 @@
 <?php
   include("footer.php");
 ?>
-
-
-
-
-
-    
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-        
-        <?php
-        // if(isset($_SESSION['id'])){
-        //     $id = $_SESSION['id'];
-        //     $username = $_SESSION['username'];
-        //     $password = $_SESSION['password'];
-        //     $sql = "SELECT * FROM login";
-        //     $result1 = mysqli_query($conn, $sql);
-        //     ?>
-        //     <a class="nav-link"><?php //echo $username; ?></a> <p></p> <a href="logout.php" class="btn btn-outline-danger">LOGOUT</a>
-        //       <?php
-        //   }else{
-        //       ?>
-        //       <a href="login.php" class="btn btn-outline-primary">LOGIN</a>
-        //       <?php
-        //   };
-          ?>
-      </ul>
-    </div>
-  </div>
-</nav> -->
 </body>
 </html>

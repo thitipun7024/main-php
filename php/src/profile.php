@@ -55,14 +55,14 @@ session_start();
 
                     <div class="form-outline form-white mb-3">
                         <?php
-                        if($row > 0){
+                        if($row != null){
                             $imageURL = 'image2/'.$row['image'];
                         ?>
                         <img src="<?php echo $imageURL ?>" alt="" width=30% height=auto/>
                         <?php
                         }else{
                         ?>
-                        <p>ไม่มีรูปภาพ</p>
+                        <p style="color: aliceblue;">ไม่มีรูปภาพ</p>
                         <?php
                         }
                         ?>

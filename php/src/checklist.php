@@ -1,6 +1,10 @@
 <?php
    session_start();
     include("conn.php");
+    if(empty($_SESSION['id'])){
+        header('Location: login.php');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +31,7 @@
     ?> -->
     <h1 class="text-center py-5">เเบบประเมิน</h1>
             <div class="py-3"></div>
-    <form action="add_check_score.php" method="post" enctype="multipart/form-data">
+    <form action="add_check_score.php" method="post">
     <div class="d-flex align-items-center min-vh-50"> 
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -55,11 +59,11 @@
 
                             <tr>
                                 <td><?php echo $row['checklist']; ?></td>
-                                <td><input type="radio" class="form-check-input" name="radio<?php echo $i; ?>" id="radio<?php echo $i; ?>_1" value="5"></td>
-                                <td><input type="radio" class="form-check-input" name="radio<?php echo $i; ?>" id="radio<?php echo $i; ?>_2" value="4"></td>
-                                <td><input type="radio" class="form-check-input" name="radio<?php echo $i; ?>" id="radio<?php echo $i; ?>_3" value="3"></td>
-                                <td><input type="radio" class="form-check-input" name="radio<?php echo $i; ?>" id="radio<?php echo $i; ?>_4" value="2"></td>
-                                <td><input type="radio" class="form-check-input" name="radio<?php echo $i; ?>" id="radio<?php echo $i; ?>_5" value="1"></td>
+                                <td><input type="radio" class="form-check-input" name="radio<?php echo $row['checklist_id']; ?>" id="radio<?php echo $i; ?>_1" value="5"></td>
+                                <td><input type="radio" class="form-check-input" name="radio<?php echo $row['checklist_id']; ?>" id="radio<?php echo $i; ?>_2" value="4"></td>
+                                <td><input type="radio" class="form-check-input" name="radio<?php echo $row['checklist_id']; ?>" id="radio<?php echo $i; ?>_3" value="3"></td>
+                                <td><input type="radio" class="form-check-input" name="radio<?php echo $row['checklist_id']; ?>" id="radio<?php echo $i; ?>_4" value="2"></td>
+                                <td><input type="radio" class="form-check-input" name="radio<?php echo $row['checklist_id']; ?>" id="radio<?php echo $i; ?>_5" value="1"></td>
                             </tr>
 
                     <?php

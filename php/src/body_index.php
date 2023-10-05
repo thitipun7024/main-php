@@ -39,6 +39,8 @@
         </div>
     </div>
 
+
+    <!-- payment Ordinary -->
     <div class="modal fade" id="myModal2">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -106,7 +108,9 @@
             </div>
         </div>
     </div>
+<!-- payment Ordinary -->
 
+<!-- payment Premium -->
     <div class="modal fade" id="myModal3">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -174,6 +178,7 @@
             </div>
         </div>
     </div>
+<!-- payment Premium -->
 
 </body>
 </html>

@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/stlye.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="icon" type="image/icon" href="./image2/admin2.png">
     <title>DEMO</title>
 </head>
@@ -27,8 +28,9 @@
                       <input type="text" name="username" id="username" class="form-control form-control-lg" placeholder="Username" />
                     </div>
       
-                    <div class="form-outline form-white mb-4">
+                    <div class="form-outline form-white mb-4 input-group">
                       <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" />
+                      <span class="input-group-text" id="basic-addon2"><i class="bi bi-eye-slash" id="TogglePassword" style="cursor: pointer;"></i></span>
                     </div>
       
                     <button class="btn btn-outline-light btn-lg px-4" type="submit">Login</button>
@@ -63,5 +65,6 @@
             </div>
         </div>
     </div> -->
+    <script src="./main.js"></script>
 </body>
 </html>

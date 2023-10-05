@@ -1,8 +1,11 @@
-setTimeout(function(){
-    swal({ 
-        icon: 'error', 
-        title: 'LOGIN FAIL'
-    }, function(){
-        window.location ='index.php'
-    })
-}, 1000);
+const togglePassword = document.querySelector("#TogglePassword");
+const password = document.querySelector("#password");
+
+togglePassword.addEventListener("click", function () {
+    // toggle the type attribute
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    
+    // toggle the icon
+    this.classList.toggle("bi-eye");
+});

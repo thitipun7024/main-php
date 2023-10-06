@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php"  style="color: #ffffff;">กระดานสนทนา</a>
+            <a class="nav-link active" aria-current="page" href="relations.php"  style="color: #ffffff;">กระดานสนทนา</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="checklist.php" style="color: #ffffff;">เเบบประเมิน</a>

@@ -41,6 +41,29 @@
 
 
     <!-- payment Ordinary -->
+    <?php
+        include("conn.php");
+        if(empty($_SESSION['id'])){
+            ?>
+             <div class="modal fade" id="myModal2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">กรุณาเข้าสู่ระบบ</h4>
+                    <button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="login.php" class="btn btn-outline-primary">login</a> 
+                </div>
+
+            </div>
+        </div>
+    </div>
+            <?php
+        }else{
+    ?>
     <div class="modal fade" id="myModal2">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -52,7 +75,7 @@
 
                 <div class="modal-body">
                     <?php
-                        include("conn.php");
+                        // include("conn.php");
                         $sql = "SELECT email FROM register WHERE id = '".$_SESSION["id"]."'";
                         $result = mysqli_query($conn, $sql);
                         $row = mysqli_fetch_array($result);
@@ -69,7 +92,7 @@
                     <h4 class="text-start">Card infomation</h4>
                     <div class="row">
                         <div>
-                        <input type="text" class="form-control" placeholder="1234 1234 1234 1234">
+                        <input type="text" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" name="card-number" id="credit-card" value="" onkeyup="formatCreditCard()">
                         </div>
                     
                         <div class="col-md-8 col-lg-6 py-1">
@@ -109,6 +132,9 @@
         </div>
     </div>
 <!-- payment Ordinary -->
+<?php }
+
+    ?>
 
 <!-- payment Premium -->
     <div class="modal fade" id="myModal3">

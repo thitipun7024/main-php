@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    include("conn.php");
+
+    $sql2 = "SELECT * FROM relations INNER JOIN register ON relations.user_id = register.id";
+    $result2 = mysqli_query($conn,$sql2);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,22 +19,34 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php
+        include("header.php");
+    ?>
+    <p></p>
     <div class="container-fluid">
+
+    <?php 
+            $i = 1;
+            while($row2 = mysqli_fetch_assoc($result2)){
+            ?>
         <div class="row justify-content-center align-items-center">
-            <div class="col-md-8 col-lg-5">
+            <div class="col-md-8 col-lg-7">
+                <form action="">
                 <div class="card border-0 shadow">
                     <div class="card-header">
                         <img src="./image2/admin-2023-10-05 14:25:53.png" alt="" class="rounded-circle" width="35" height="35"> &nbsp; 
-                        <small>111</small> |
-                        <small>12-12-12</small> 
+                        <small><?php echo $row2["username"] ?></small> |
+                        <small><?php echo $row2['create_date'] ?></small> 
                         <br>
                         <p></p>
-                        <h5>1111111111111111111</h5>
+                        <h5><?php echo $row2['title'] ?></h5>
                     </div>
 
                     <div class="card-body">
-                        <img src="./image2/2023-09-20 13:52:50.png" alt="" width="100%">
-                       <div class="text-end">ความคิดเห็นทั้งหมด</div>
+                        <img src="./image2/<?php echo $row2['image_r'] ?>" alt="" width="100%">
+                        <p></p>
+                       <div class="text-end">ความคิดเห็นทั้งหมด <?php echo $row2['all_comment'] ?></div>
                     </div>
 
                     <div class="card-footer">
@@ -44,9 +64,18 @@
 
                     </div>
                 </div>
+            </form>
             </div>
-        </div>
+            </div>
+            <p></p>
+        <?php
+        $i++;
+        }
+        ?>
     </div>
+
+    <p></p>
+    <?php include("footer.php");?>
 
     <script src="./main.js"></script>
 </body>

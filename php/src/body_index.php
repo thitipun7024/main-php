@@ -92,7 +92,7 @@
                     <h4 class="text-start">Card infomation</h4>
                     <div class="row">
                         <div>
-                        <input type="text" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" name="card-number" id="credit-card" value="" onkeyup="formatCreditCard()">
+                        <input type="text" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" name="card-number" id="credit-card" >
                         </div>
                     
                         <div class="col-md-8 col-lg-6 py-1">

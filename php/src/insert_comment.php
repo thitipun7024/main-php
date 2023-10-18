@@ -11,7 +11,7 @@
     $result2 = mysqli_query($conn, $sql2);
 
     echo "<script>";
-    echo "alert(\"register success\");";
+    echo "alert(\"send success\");";
     echo "window.history.back()";
     echo "</script>";
 ?>

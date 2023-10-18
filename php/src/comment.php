@@ -13,6 +13,13 @@
     $sql2 = "SELECT * FROM comment INNER JOIN register ON comment.user_id = register.id WHERE relation_id = '{$_GET['relation_id']}'";
     $result2 = mysqli_query($conn,$sql2);
 
+    $sqltest2 = "SELECT *
+    FROM comment
+    INNER JOIN register ON comment.user_c_id = register.id
+    INNER JOIN relations ON comment.relation_id = relations.relation_id
+    WHERE comment.relation_id = '{$_GET['relation_id']}'";
+    $rt2 = mysqli_query($conn, $sqltest2);
+
     // $sqltest = "SELECT register.*, relations.*, comment.* FROM ((comment INNER JOIN register ON comment.userid = register.id WHERE relation_id = '{$_GET['relation_id']}')INNER JOIN relations ON comment.relation_id = relations.relation_id WHERE relation_id = '{$_GET['relation_id']}')";
     // $resulttest = mysqli_query($conn,$sqltest);
 ?>
@@ -59,7 +66,7 @@
 
             <?php 
             $i = 1;
-            while ($row2 = mysqli_fetch_assoc($result2)){
+            while ($row2 = mysqli_fetch_assoc($rt2)){
             ?>
             <p></p>
             <div class="card border-0" style="background-color: rgba(240, 248, 255, 0);">
@@ -74,11 +81,13 @@
                         <div class="card-body">
                             <h5><?php echo $row2['detail']; ?></h5>
                             <?php
-                            if($_SESSION['id'] == $row2['user_id']){
+                            //echo $_SESSION['id'];
+                            //echo $row2['user_id'];
+                            if($_SESSION['id'] == $row2['user_c_id']){
                             ?>
                             
                             <div class="text-end">
-                                <a href="delete_comment.php?comment_id=<?php echo $row2['comment_id']; ?>" class="btn btn-danger">ลบ</a>
+                                <a href="delete_comment.php?comment_id=<?php echo $row2['comment_id'];?>&&relation_id=<?php echo $row2['relation_id'];?>" class="btn btn-danger">ลบ</a>
                             </div>
                             <?php
                             }

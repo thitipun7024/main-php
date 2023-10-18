@@ -32,7 +32,7 @@ if($img != null){
     $extArray = explode('.',$img);
     $ext = strtolower(end($extArray));
 
-    $nameimg = $update_date.".".$ext;
+    $nameimg = $user."-".$update_date.".".$ext;
     $location = "image2/";
     move_uploaded_file($tmp,$location.$nameimg);
 

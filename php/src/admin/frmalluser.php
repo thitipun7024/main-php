@@ -1,12 +1,12 @@
 <?php
-	include "../include/connect.php";
+	include "../conn.php";
 	$strKeyword = null;
 
 	if(isset($_POST["txtKeyword"]))
 	{
 		$strKeyword = $_POST["txtKeyword"];
 	}
-	$sqluser ="SELECT * FROM tb_user WHERE name_user LIKE '%$strKeyword%' AND (role_user='user' OR role_user='staff') ORDER BY id_user DESC";
+	$sqluser ="SELECT * FROM register WHERE usernamne LIKE '%$strKeyword%'  ORDER BY id DESC";
 	$resultuser = mysqli_query($conn,$sqluser);    
 	?>
 		<nav class="navbar-expand-lg">

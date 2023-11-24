@@ -15,8 +15,7 @@ if($photo_name != "")
 	{
         //*** Delete Old File ***//			
 			@unlink("../picdoctor/".$name_photo);
-		if(move_uploaded_file($photo_temp,"../picdoctor/$name_photo"))
-		{
+		if(move_uploaded_file($photo_temp,"../picdoctor/$name_photo")){
 			//*** Update New File ***//
 			$updatephoto = "UPDATE tb_doctor SET photo_doctor = '$name_photo' WHERE id_doctor = '$id' ";
 			mysqli_query($conn,$updatephoto);		

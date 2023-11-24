@@ -1,5 +1,5 @@
 <?php
-	include "../include/connect.php";
+	include "../conn.php";
     if(isset($_SESSION["ID"])){
         $sql ="SELECT * FROM tb_user WHERE id_user='".$_SESSION["ID"]."'";
 	    $result = mysqli_query($conn,$sql);
@@ -7,7 +7,7 @@
     }
 ?>
 
-<header class="border-bottom bg-secondary">
+<header class="border-bottom bg-light">
     <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">

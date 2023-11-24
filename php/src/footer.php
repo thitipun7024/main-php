@@ -55,6 +55,17 @@
                       <div class="card-header border-0" style="background-color: rgba(240, 248, 255, 0);">
                           <h3 class="text-center" style="background-color: rgba(240, 248, 255, 0);">สถิติผู้เข้าชม</h3>
                       </div>
+
+                      <div class="card-body text-center" style="font-weight: 500;">
+                        <h3><?php 
+                          include("conn.php");
+                          $sql2 = "SELECT * FROM relations";
+                          $result2 = mysqli_query($conn, $sql2);
+                          $row2 = mysqli_num_rows($result2);
+                          echo $row2;
+                        ?></h3>
+
+                      </div>
                   </div>
                 </div>
 
